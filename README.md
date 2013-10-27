@@ -24,9 +24,21 @@ ptolemy = Ptolemy::Client.new ECHONEST_API_KEY
 # Search using The Echo Nest ID for Radiohead
 results = ptolemy.search "ARH6W4X1187B99274F"
     
-puts results[:rdio]  # "r91318"
-puts results[:facebook] # "6979332244"
-puts results[:spotify] # "4Z8W4fKeB5YxbusRsdQVPb"
+results["7digital"] # "304"
+results["deezer"] # "399"
+results["echonest"] # "Radiohead"
+results["facebook"] # "6979332244"
+results["jambase"] # "8317" 
+results["musicbrainz"] # "a74b1b7f-71a5-4011-9441-d0b5e4122711"
+results["playme"] # "1307"
+results["rhapsody"] # "Art.4817"
+results["rdio"] # "r91318"
+results["seat_geek"] # "2570"
+results["songkick"] # "253846"
+results["song_meanings"] # "200"
+results["spotify"] # "4Z8W4fKeB5YxbusRsdQVPb"
+results["twitter"] # "radiohead"
+results["who_sampled"] # "3309"
 ```
 
 ## Contributing

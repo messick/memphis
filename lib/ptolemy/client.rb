@@ -53,13 +53,14 @@ module Ptolemy
 
       # Also put the echonest artist name in there, even though
       # it's not technically a "foreign" id
-      foreign_ids[:echonest] = http_response["response"]["artist"]["name"]
+      foreign_ids["echonest"] = http_response["response"]["artist"]["name"]
 
       http_response['response']['artist']['foreign_ids'].each do |hash|
 
         id_parts = hash["foreign_id"].split(':')
 
-        provider = FOREIGN_PROVIDERS["id:#{id_parts[0]}"].to_sym
+        provider = FOREIGN_PROVIDERS[id_parts[0]]
+
         foreign_id = id_parts[2]
 
         foreign_ids[provider] = foreign_id

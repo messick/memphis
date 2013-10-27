@@ -2,6 +2,7 @@ module Memphis
   class Client
     class ConnectionError < Exception; end
     class EmptyAPIKeyError < Exception; end
+    class EmptySearchIDError < Exception; end
 
     FOREIGN_PROVIDERS = {
       '7digital-US' => '7digital',
@@ -32,6 +33,10 @@ module Memphis
     end
 
     def search id
+      if id.to_s == ""
+        raise EmptySearchIDError, "need to pass in an The Echo Nest artist ID, such as: \"ARH6W4X1187B99274F\""
+      end
+
       @id = id
       results = get_foreign_id_hash
 

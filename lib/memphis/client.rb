@@ -1,6 +1,6 @@
-module Ptolemy
+module Memphis
   class Client
-    class PtolemyConnectionError < Exception; end
+    class MemphisConnectionError < Exception; end
 
     FOREIGN_PROVIDERS = {
       '7digital-US' => '7digital',

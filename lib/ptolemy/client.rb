@@ -3,12 +3,21 @@ module Ptolemy
     class PtolemyConnectionError < Exception; end
 
     FOREIGN_PROVIDERS = {
-      'id:7digital-US' => '7digital',
-      'id:facebook' => 'facebook',
-      'id:rdio-US' => 'rdio',
-      'id:spotify-WW' => 'spotify',
-      'id:songkick' => 'songkick',
-      'id:twitter' => 'twitter'
+      '7digital-US' => '7digital',
+      'deezer' => 'deezer',
+      'facebook' => 'facebook',
+      'fma' => 'free_music_rchive',
+      'jambase' => 'jambase',
+      'musicbrainz' => 'musicbrainz',
+      'playme' => 'playme',
+      'rhapsody-US' => 'rhapsody',
+      'rdio-US' => 'rdio',
+      'seatgeek' => 'seat_geek',
+      'songkick' => 'songkick',
+      'spotify-WW' => 'spotify',
+      'songmeanings' => 'song_meanings',
+      'twitter' => 'twitter',
+      'whosampled' => 'who_sampled'
     }
 
     def initialize api_key
@@ -35,11 +44,12 @@ module Ptolemy
     end
 
     def provider_params
-      "&bucket=" + FOREIGN_PROVIDERS.keys.join('&bucket=')
+      "&bucket=id:" + FOREIGN_PROVIDERS.keys.join('&bucket=id:')
     end
 
     def parse_response http_response
       foreign_ids = {}
+
 
       # Also put the echonest artist name in there, even though
       # it's not technically a "foreign" id

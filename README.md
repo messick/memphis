@@ -1,6 +1,6 @@
 # Ptolemy
 
-TODO: Write a gem description
+An easy way to use The Echo Nest's Project Rosetta Stone to lookup IDs of other providers using a Echo Nest ID.
 
 ## Installation
 

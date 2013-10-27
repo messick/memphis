@@ -2,6 +2,8 @@
 
 An easy way to use The Echo Nest's Project Rosetta Stone to lookup IDs of other providers using a Echo Nest ID.
 
+The [Decree of Memphis](http://en.wikipedia.org/wiki/Rosetta_Stone_decree) is the message that is inscribed on the actual Rosetta Stone.
+
 ## Installation
 
 Add this line to your application's Gemfile:

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in ptolemy.gemspec
+# Specify your gem's dependencies in memphis.gemspec
 gemspec

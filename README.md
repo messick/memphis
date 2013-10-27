@@ -1,4 +1,4 @@
-# Ptolemy
+# Memphis
 
 An easy way to use The Echo Nest's Project Rosetta Stone to lookup IDs of other providers using a Echo Nest ID.
 
@@ -6,7 +6,7 @@ An easy way to use The Echo Nest's Project Rosetta Stone to lookup IDs of other 
 
 Add this line to your application's Gemfile:
 
-    gem 'ptolemy'
+    gem 'memphis'
 
 And then execute:
 
@@ -14,17 +14,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ptolemy
+    $ gem install memphis
 
 ## Usage
 
 ```ruby
-require 'ptolemy'
+require 'memphis'
 
-ptolemy = Ptolemy::Client.new ECHONEST_API_KEY
+memphis = Memphis::Client.new ECHONEST_API_KEY
     
 # Search using The Echo Nest ID for Radiohead
-results = ptolemy.search "ARH6W4X1187B99274F"
+results = memphis.search "ARH6W4X1187B99274F"
     
 results["7digital"] # "304"
 results["deezer"] # "399"

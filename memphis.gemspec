@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ptolemy/version'
+require 'memphis/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ptolemy"
-  spec.version       = Ptolemy::VERSION
+  spec.name          = "memphis"
+  spec.version       = Memphis::VERSION
   spec.authors       = ["Nick Messick"]
   spec.email         = ["nmessick@gmail.com"]
   spec.description   = %q{Use Echonest's Rosetta Stone project to lookup ids for various other services}

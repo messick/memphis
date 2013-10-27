@@ -19,6 +19,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'ptolemy'
+
 ptolemy = Ptolemy::Client.new ECHONEST_API_KEY
     
 # Search using The Echo Nest ID for Radiohead

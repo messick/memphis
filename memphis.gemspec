@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Memphis::VERSION
   spec.authors       = ["Nick Messick"]
   spec.email         = ["nmessick@gmail.com"]
-  spec.description   = %q{Use Echonest's Rosetta Stone project to lookup ids for various other services}
-  spec.summary       = %q{Use Echonest's Rosetta Stone project to lookup ids for various other services}
+  spec.description   = %q{Use The Echo Nest's Rosetta Stone project to look up IDs for various other services.}
+  spec.summary       = %q{Use The Echo Nest's Rosetta Stone project to look up IDs for various other services.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

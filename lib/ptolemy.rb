@@ -1,5 +1,8 @@
-require "ptolemy/version"
+require_relative 'ptolemy/version'
+
+require 'httparty'
+require 'multi_json'
 
 module Ptolemy
-  # Your code goes here...
+
 end

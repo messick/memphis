@@ -1,6 +1,7 @@
 module Memphis
   class Client
-    class MemphisConnectionError < Exception; end
+    class ConnectionError < Exception; end
+    class EmptyAPIKeyError < Exception; end
 
     FOREIGN_PROVIDERS = {
       '7digital-US' => '7digital',
@@ -22,7 +23,11 @@ module Memphis
 
     BASE_URI = 'http://developer.echonest.com/api/v4/artist/profile?'
 
-    def initialize api_key
+    def initialize api_key=nil
+      if api_key.to_s == ""
+        raise EmptyAPIKeyError, "If you don't already have an an account, register here: https://developer.echonest.com/account/register"
+      end
+
       @api_key = api_key
     end
 

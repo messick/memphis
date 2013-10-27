@@ -20,9 +20,10 @@ module Ptolemy
       'whosampled' => 'who_sampled'
     }
 
+    BASE_URI = 'http://developer.echonest.com/api/v4/artist/profile?'
+
     def initialize api_key
       @api_key = api_key
-      @base_uri = 'http://developer.echonest.com/api/v4/artist/profile?'
     end
 
     def search id
@@ -35,7 +36,7 @@ module Ptolemy
     private
 
     def get_foreign_id_hash
-      uri = @base_uri
+      uri = BASE_URI
       uri += "api_key=#{@api_key}"
       uri += "&id=#{@id}"
       uri += provider_params

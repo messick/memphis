@@ -38,9 +38,11 @@ module Memphis
       end
 
       @id = id
-      results = get_foreign_id_hash
+      results_hash = get_foreign_id_hash
 
-      results
+      result = Result.new(results_hash)
+
+      result
     end
 
     private

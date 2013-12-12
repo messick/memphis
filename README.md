@@ -30,26 +30,26 @@ search_result = memphis.search "ARH6W4X1187B99274F"
 
 # Show providers includeding in results
 
-search_results.providers
+search_result.providers
 => ["7digital", "deezer", "echonest", "facebook", "jambase", "musicbrainz", "playme", "rdio", "rhapsody", "seat_geek", "song_meanings", "songkick", "spotify", "twitter", "who_sampled"]
 
 # Show results
     
-search_results.7digital # "304"
-search_results.deezer # "399"
-search_results.echonest # "Radiohead"
-search_results.facebook # "6979332244"
-search_results.jambase # "8317" 
-search_results.musicbrainz # "a74b1b7f-71a5-4011-9441-d0b5e4122711"
-search_results.playme # "1307"
-search_results.rhapsody # "Art.4817"
-search_results.rdio # "r91318"
-search_results.seat_geek # "2570"
-search_results.songkick # "253846"
-search_results.song_meanings # "200"
-search_results.spotify # "4Z8W4fKeB5YxbusRsdQVPb"
-search_results.twitter # "radiohead"
-search_results.who_sampled # "3309"
+search_result.7digital # "304"
+search_result.deezer # "399"
+search_result.echonest # "Radiohead"
+search_result.facebook # "6979332244"
+search_result.jambase # "8317" 
+search_result.musicbrainz # "a74b1b7f-71a5-4011-9441-d0b5e4122711"
+search_result.playme # "1307"
+search_result.rhapsody # "Art.4817"
+search_result.rdio # "r91318"
+search_result.seat_geek # "2570"
+search_result.songkick # "253846"
+search_result.song_meanings # "200"
+search_result.spotify # "4Z8W4fKeB5YxbusRsdQVPb"
+search_result.twitter # "radiohead"
+search_result.who_sampled # "3309"
 ```
 
 ## Contributing

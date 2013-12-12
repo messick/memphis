@@ -23,26 +23,33 @@ Or install it yourself as:
 ```ruby
 require 'memphis'
 
-memphis = Memphis::Client.new ECHONEST_API_KEY
+memphis = Memphis::Memphis.new ECHONEST_API_KEY
     
 # Search using The Echo Nest ID for Radiohead
-results = memphis.search "ARH6W4X1187B99274F"
+search_result = memphis.search "ARH6W4X1187B99274F"
+
+# Show providers includeding in results
+
+search_results.providers
+=> ["7digital", "deezer", "echonest", "facebook", "jambase", "musicbrainz", "playme", "rdio", "rhapsody", "seat_geek", "song_meanings", "songkick", "spotify", "twitter", "who_sampled"]
+
+# Show results
     
-results["7digital"] # "304"
-results["deezer"] # "399"
-results["echonest"] # "Radiohead"
-results["facebook"] # "6979332244"
-results["jambase"] # "8317" 
-results["musicbrainz"] # "a74b1b7f-71a5-4011-9441-d0b5e4122711"
-results["playme"] # "1307"
-results["rhapsody"] # "Art.4817"
-results["rdio"] # "r91318"
-results["seat_geek"] # "2570"
-results["songkick"] # "253846"
-results["song_meanings"] # "200"
-results["spotify"] # "4Z8W4fKeB5YxbusRsdQVPb"
-results["twitter"] # "radiohead"
-results["who_sampled"] # "3309"
+search_results.7digital # "304"
+search_results.deezer # "399"
+search_results.echonest # "Radiohead"
+search_results.facebook # "6979332244"
+search_results.jambase # "8317" 
+search_results.musicbrainz # "a74b1b7f-71a5-4011-9441-d0b5e4122711"
+search_results.playme # "1307"
+search_results.rhapsody # "Art.4817"
+search_results.rdio # "r91318"
+search_results.seat_geek # "2570"
+search_results.songkick # "253846"
+search_results.song_meanings # "200"
+search_results.spotify # "4Z8W4fKeB5YxbusRsdQVPb"
+search_results.twitter # "radiohead"
+search_results.who_sampled # "3309"
 ```
 
 ## Contributing

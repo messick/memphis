@@ -22,7 +22,7 @@ module Memphis
       'whosampled' => 'who_sampled'
     }
 
-    BASE_URI = 'http://developer.echonest.com/api/v4/artist/profile?'
+    ARTIST_URL = File.join(::Memphis::Configuration.base_uri, '/artist/profile?')
 
     def initialize api_key=nil
       if api_key.to_s == ""

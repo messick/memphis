@@ -23,6 +23,10 @@ Or install it yourself as:
 ```ruby
 require 'memphis'
 
+Memphis.configure do |config|
+  config.api_key = ECHONEST_API_KEY
+end
+
 memphis = Memphis::Memphis.new ECHONEST_API_KEY
     
 # Search using The Echo Nest ID for Radiohead

@@ -28,10 +28,10 @@ Memphis.configure do |config|
 end
 
 # Artist Search
-memphis = Memphis::Artist.new
+memphis_artist = Memphis::Artist.new
     
 # Search using The Echo Nest ID for Radiohead
-search_result = memphis.search "ARH6W4X1187B99274F"
+search_result = memphis_artist.search "ARH6W4X1187B99274F"
 
 # Show providers includeding in results
 

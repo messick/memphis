@@ -3,6 +3,7 @@ module Memphis
     class ConnectionError < Exception; end
     class EmptyAPIKeyError < Exception; end
     class EmptySearchIDError < Exception; end
+    class DirectClientUserError < Exception; end
 
     FOREIGN_PROVIDERS = {
       '7digital-US' => '7digital',
@@ -22,21 +23,21 @@ module Memphis
       'whosampled' => 'who_sampled'
     }
 
-    ARTIST_URI = File.join(::Memphis::Configuration.base_uri, '/artist/profile?')
-
     def initialize
+      raise DirectClientUserError, "You cannot instantiate Client class directly" if self.class == Memphis::Client
+
       if Memphis.api_key.nil?
         raise EmptyAPIKeyError, "If you don't already have an an account, register here: https://developer.echonest.com/account/register"
       end
     end
 
-    def search id
+    def client_search search_base_uri, id
       if id.to_s == ""
         raise EmptySearchIDError, "need to pass in an The Echo Nest artist ID, such as: \"ARH6W4X1187B99274F\""
       end
 
       @id = id
-      results_hash = get_foreign_id_hash
+      results_hash = get_foreign_id_hash search_base_uri
 
       result = Result.new(results_hash)
 
@@ -45,8 +46,8 @@ module Memphis
 
     private
 
-    def get_foreign_id_hash
-      uri = ARTIST_URI
+    def get_foreign_id_hash search_base_uri
+      uri = search_base_uri
       uri += "api_key=#{Memphis.api_key}"
       uri += "&id=#{@id}"
       uri += provider_params

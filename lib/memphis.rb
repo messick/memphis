@@ -7,6 +7,5 @@ require 'httparty'
 require 'multi_json'
 
 module Memphis
-  BASE_URI = 'ss'
   extend Configuration
 end

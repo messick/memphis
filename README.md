@@ -27,7 +27,7 @@ Memphis.configure do |config|
   config.api_key = ECHONEST_API_KEY
 end
 
-memphis = Memphis::Memphis.new ECHONEST_API_KEY
+memphis = Memphis::Client.new
     
 # Search using The Echo Nest ID for Radiohead
 search_result = memphis.search "ARH6W4X1187B99274F"

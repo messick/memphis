@@ -22,14 +22,12 @@ module Memphis
       'whosampled' => 'who_sampled'
     }
 
-    ARTIST_URL = File.join(::Memphis::Configuration.base_uri, '/artist/profile?')
+    ARTIST_URI = File.join(::Memphis::Configuration.base_uri, '/artist/profile?')
 
-    def initialize api_key=nil
-      if api_key.to_s == ""
+    def initialize
+      if Memphis.api_key.nil?
         raise EmptyAPIKeyError, "If you don't already have an an account, register here: https://developer.echonest.com/account/register"
       end
-
-      @api_key = api_key
     end
 
     def search id
@@ -48,8 +46,8 @@ module Memphis
     private
 
     def get_foreign_id_hash
-      uri = BASE_URI
-      uri += "api_key=#{@api_key}"
+      uri = ARTIST_URI
+      uri += "api_key=#{Memphis.api_key}"
       uri += "&id=#{@id}"
       uri += provider_params
 
